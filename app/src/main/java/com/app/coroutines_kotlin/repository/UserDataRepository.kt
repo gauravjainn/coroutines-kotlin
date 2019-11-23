@@ -16,6 +16,8 @@ class UserDataRepository(
 
     override suspend fun getByUsername(username: String) = withContext(IO) {
         api.getByUsername(username).await().toModel()
+
+
     }
 
 }
